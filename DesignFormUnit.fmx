@@ -1,0 +1,117 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object HelicopterLayout: TLayout
+    Height = 41.000000000000000000
+    Position.X = 136.000000000000000000
+    Position.Y = 256.000000000000000000
+    Width = 80.000000000000000000
+    object Circle1: TCircle
+      Fill.Color = claRed
+      Height = 80.000000000000000000
+      Position.Y = -20.000000000000000000
+      Stroke.Kind = bkNone
+      Stroke.Cap = scRound
+      Visible = False
+      Width = 80.000000000000000000
+      object ColorAnimation1: TColorAnimation
+        AutoReverse = True
+        Enabled = True
+        Duration = 0.200000002980232200
+        Loop = True
+        PropertyName = 'Fill.Color'
+        StartValue = claRed
+        StartFromCurrent = True
+        StopValue = x00FF5050
+      end
+    end
+    object Pie1: TPie
+      Height = 25.000000000000000000
+      Position.X = 32.000000000000000000
+      Position.Y = 8.000000000000000000
+      Width = 41.000000000000000000
+      StartAngle = -150.000000000000000000
+      EndAngle = 150.000000000000000000
+    end
+    object Rectangle1: TRectangle
+      Height = 9.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object Layout1: TLayout
+      Height = 41.000000000000000000
+      Position.X = 32.000000000000000000
+      RotationAngle = 45.000000000000000000
+      Width = 42.000000000000000000
+      object Rectangle2: TRectangle
+        Height = 41.000000000000000000
+        Position.X = 16.000000000000000000
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        Width = 9.000000000000000000
+      end
+      object Rectangle3: TRectangle
+        Height = 9.000000000000000000
+        Position.Y = 16.000000000000000000
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        Width = 41.000000000000000000
+      end
+      object FloatAnimation1: TFloatAnimation
+        Enabled = True
+        Duration = 1.000000000000000000
+        Loop = True
+        PropertyName = 'RotationAngle'
+        StartValue = 0.000000000000000000
+        StopValue = 360.000000000000000000
+      end
+    end
+    object ShadowEffect1: TShadowEffect
+      Distance = 40.000000000000000000
+      Direction = 60.000000000000000000
+      Softness = 0.250000000000000000
+      Opacity = 0.400000005960464500
+      ShadowColor = claBlack
+    end
+    object Rectangle4: TRectangle
+      Height = 8.000000000000000000
+      Position.X = 6.000000000000000000
+      Position.Y = 9.000000000000000000
+      XRadius = 2.000000000000000000
+      YRadius = 2.000000000000000000
+      Width = 20.000000000000000000
+      object FloatAnimation7: TFloatAnimation
+        AutoReverse = True
+        Enabled = True
+        Duration = 0.200000002980232200
+        Inverse = True
+        Loop = True
+        PropertyName = 'Scale.X'
+        StartValue = 0.000000000000000000
+        StopValue = 1.000000000000000000
+      end
+      object FloatAnimation8: TFloatAnimation
+        AutoReverse = True
+        Enabled = True
+        Duration = 0.200000002980232200
+        Loop = True
+        PropertyName = 'Position.X'
+        StartValue = 6.000000000000000000
+        StopValue = 16.000000000000000000
+      end
+    end
+  end
+end

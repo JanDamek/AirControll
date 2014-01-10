@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1590D21E-3E4E-45E9-8D95-63A713F9D089}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AirControll.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\AdMobPackage\AdMobLibrary.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\DPF_iOS\DPFiOSPackagesXE5.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AirControll">
+        <MSBuild Projects="AirControll.dproj"/>
+    </Target>
+    <Target Name="AirControll:Clean">
+        <MSBuild Projects="AirControll.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AirControll:Make">
+        <MSBuild Projects="AirControll.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AdMobLibrary">
+        <MSBuild Projects="..\AdMobPackage\AdMobLibrary.dproj"/>
+    </Target>
+    <Target Name="AdMobLibrary:Clean">
+        <MSBuild Projects="..\AdMobPackage\AdMobLibrary.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AdMobLibrary:Make">
+        <MSBuild Projects="..\AdMobPackage\AdMobLibrary.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DPFiOSPackagesXE5">
+        <MSBuild Projects="..\DPF_iOS\DPFiOSPackagesXE5.dproj"/>
+    </Target>
+    <Target Name="DPFiOSPackagesXE5:Clean">
+        <MSBuild Projects="..\DPF_iOS\DPFiOSPackagesXE5.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DPFiOSPackagesXE5:Make">
+        <MSBuild Projects="..\DPF_iOS\DPFiOSPackagesXE5.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AirControll;AdMobLibrary;DPFiOSPackagesXE5"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AirControll:Clean;AdMobLibrary:Clean;DPFiOSPackagesXE5:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AirControll:Make;AdMobLibrary:Make;DPFiOSPackagesXE5:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

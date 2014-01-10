@@ -1,0 +1,492 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 320
+  ClientWidth = 480
+  Transparency = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  DesignerMobile = True
+  DesignerWidth = 480
+  DesignerHeight = 320
+  DesignerDeviceName = 'iPhone'
+  DesignerOrientation = 1
+  DesignerOSVersion = '7'
+  object Lang1: TLang
+    Lang = 'cs'
+    Left = 544
+    Top = 48
+  end
+  object GameLayout: TLayout
+    Align = alClient
+    Locked = True
+    Height = 320.000000000000000000
+    Width = 480.000000000000000000
+    object Game: TRectangle
+      Align = alClient
+      Fill.Color = claLightgreen
+      Locked = True
+      Height = 270.000000000000000000
+      HitTest = False
+      Stroke.Color = claBrown
+      Stroke.Thickness = 3.000000000000000000
+      XRadius = 25.000000000000000000
+      YRadius = 20.000000000000000000
+      Width = 480.000000000000000000
+      object ScoreBoardLayout: TLayout
+        Align = alTop
+        Locked = True
+        Height = 40.000000000000000000
+        Width = 480.000000000000000000
+        object Layout2: TLayout
+          Align = alRight
+          Locked = True
+          Height = 40.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Position.X = 352.000000000000000000
+          Width = 108.000000000000000000
+          object lbHiScore: TLabel
+            Align = alCenter
+            AutoSize = True
+            Height = 27.000000000000000000
+            Text = 'Hi score: %d'
+            TextAlign = taTrailing
+            Width = 97.000000000000000000
+            WordWrap = False
+            Trimming = ttCharacter
+          end
+          object ShadowEffect2: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Layout3: TLayout
+          Align = alLeft
+          Locked = True
+          Height = 40.000000000000000000
+          Margins.Left = 20.000000000000000000
+          Position.X = 20.000000000000000000
+          Width = 109.000000000000000000
+          object lbLanded: TLabel
+            Align = alCenter
+            AutoSize = True
+            Height = 27.000000000000000000
+            Text = 'Landed: %d'
+            Width = 91.000000000000000000
+            WordWrap = False
+            Trimming = ttCharacter
+          end
+          object ShadowEffect1: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object lbTime: TLabel
+          Align = alCenter
+          AutoSize = True
+          Height = 27.000000000000000000
+          Text = '0:00:00'
+          Width = 57.000000000000000000
+          WordWrap = False
+          Trimming = ttCharacter
+        end
+      end
+      object Layout1: TLayout
+        Align = alBottom
+        Locked = True
+        Height = 45.000000000000000000
+        Position.Y = 225.000000000000000000
+        Width = 480.000000000000000000
+        object Layout4: TLayout
+          Align = alLeft
+          Locked = True
+          Height = 40.000000000000000000
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 10.000000000000000000
+          Width = 40.000000000000000000
+          object Rectangle2: TRectangle
+            Align = alClient
+            Fill.Color = claLightblue
+            Height = 30.000000000000000000
+            Stroke.Color = claBlueviolet
+            XRadius = 15.000000000000000000
+            YRadius = 15.000000000000000000
+            Width = 30.000000000000000000
+            OnClick = Rectangle2Click
+            object Label2: TLabel
+              Align = alClient
+              Locked = True
+              Height = 30.000000000000000000
+              Text = 'P'
+              TextAlign = taCenter
+              Width = 30.000000000000000000
+              Trimming = ttCharacter
+              object ShadowEffect6: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.300000011920929000
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+            end
+            object GlowEffect1: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsMouseOver=true'
+            end
+          end
+          object ShadowEffect4: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Layout5: TLayout
+          Align = alRight
+          Locked = True
+          Height = 40.000000000000000000
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 430.000000000000000000
+          Width = 40.000000000000000000
+          object Rectangle3: TRectangle
+            Align = alClient
+            Fill.Color = claLightblue
+            Height = 30.000000000000000000
+            Stroke.Color = claBlueviolet
+            XRadius = 15.000000000000000000
+            YRadius = 15.000000000000000000
+            Width = 30.000000000000000000
+            object Label1: TLabel
+              Align = alClient
+              Font.Family = 'Calibri'
+              Font.Style = [fsItalic]
+              FontColor = claBlue
+              StyledSettings = [ssSize]
+              Locked = True
+              Height = 30.000000000000000000
+              Text = 'i'
+              TextAlign = taCenter
+              Width = 30.000000000000000000
+              WordWrap = False
+              Trimming = ttCharacter
+              object ShadowEffect5: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.300000011920929000
+                Opacity = 0.600000023841857900
+                ShadowColor = claBlack
+              end
+            end
+            object GlowEffect2: TGlowEffect
+              Softness = 0.400000005960464500
+              GlowColor = claGold
+              Opacity = 0.899999976158142100
+              Trigger = 'IsMouseOver=true'
+            end
+          end
+          object ShadowEffect3: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+      end
+    end
+    object Letiste: TPie
+      Align = alCenter
+      Locked = True
+      Height = 150.000000000000000000
+      HitTest = False
+      Width = 305.000000000000000000
+      StartAngle = 30.000000000000000000
+      EndAngle = 290.000000000000000000
+      object Runway_short: TRectangle
+        Fill.Color = claAqua
+        Locked = True
+        Height = 121.000015258789100000
+        HitTest = False
+        Position.X = 150.000000000000000000
+        Position.Y = -14.000001907348630000
+        RotationAngle = 36.500000000000000000
+        Stroke.Thickness = 3.000000000000000000
+        Width = 18.000000000000000000
+        object ShadowEffect9: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+        object Line1: TLine
+          Locked = True
+          Height = 120.000000000000000000
+          LineType = ltLeft
+          Position.X = 8.500000000000000000
+          Stroke.Dash = sdDash
+          Width = 2.000000000000000000
+        end
+        object rw_short_landing: TRectangle
+          Align = alTop
+          Fill.Kind = bkGradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          Height = 25.000000000000000000
+          Margins.Left = 3.000000000000000000
+          Margins.Top = 3.000000000000000000
+          Margins.Right = 3.000000000000000000
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Stroke.Kind = bkNone
+          Width = 12.000000000000000000
+        end
+      end
+      object Layout_heliport: TLayout
+        Locked = True
+        Height = 40.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 52.000003814697270000
+        Width = 40.000000000000000000
+        object Heliport: TRectangle
+          Align = alClient
+          Fill.Color = claAqua
+          Height = 40.000000000000000000
+          Stroke.Thickness = 3.000000000000000000
+          XRadius = 20.000000000000000000
+          YRadius = 20.000000000000000000
+          Width = 40.000000000000000000
+          object Label3: TLabel
+            Align = alClient
+            Font.Size = 30.000000000000000000
+            Font.Style = [fsBold]
+            StyledSettings = [ssFamily, ssFontColor]
+            Locked = True
+            Height = 40.000000000000000000
+            Text = 'H'
+            TextAlign = taCenter
+            Width = 40.000000000000000000
+            Trimming = ttCharacter
+          end
+        end
+        object ShadowEffect8: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+      end
+      object ShadowEffect7: TShadowEffect
+        Distance = 5.000000000000000000
+        Direction = 30.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+      object Runway_long: TRectangle
+        Fill.Color = claAqua
+        Locked = True
+        Height = 150.000000000000000000
+        HitTest = False
+        Position.X = 201.000000000000000000
+        Position.Y = 28.000000000000000000
+        RotationAngle = 106.000000000000000000
+        Stroke.Thickness = 3.000000000000000000
+        Width = 18.000000000000000000
+        object ShadowEffect10: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+        object Line2: TLine
+          Locked = True
+          Height = 150.000000000000000000
+          LineType = ltLeft
+          Position.X = 8.500000000000000000
+          Stroke.Dash = sdDash
+          Width = 2.000000000000000000
+        end
+        object rw_long_landing: TRectangle
+          Align = alTop
+          Fill.Kind = bkGradient
+          Fill.Gradient.Points = <
+            item
+              Color = claBlack
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          Height = 25.000000000000000000
+          Margins.Left = 3.000000000000000000
+          Margins.Top = 3.000000000000000000
+          Margins.Right = 3.000000000000000000
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Stroke.Kind = bkNone
+          Width = 12.000000000000000000
+        end
+      end
+      object Rectangle9: TRectangle
+        Fill.Color = claAqua
+        Locked = True
+        Height = 105.000007629394500000
+        HitTest = False
+        Position.X = 79.999992370605470000
+        Position.Y = 21.000001907348630000
+        Stroke.Thickness = 3.000000000000000000
+        Width = 65.999992370605470000
+      end
+      object Rectangle10: TRectangle
+        Fill.Color = claAqua
+        Locked = True
+        Height = 36.999996185302730000
+        HitTest = False
+        Position.X = 96.000000000000000000
+        Position.Y = 54.000003814697270000
+        Stroke.Kind = bkNone
+        Width = 50.000000000000000000
+      end
+    end
+    object Vrtulnik: TLayout
+      Height = 41.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 48.000000000000000000
+      Width = 80.000000000000000000
+      object Pie6: TPie
+        Height = 25.000000000000000000
+        Position.X = 32.000000000000000000
+        Position.Y = 8.000000000000000000
+        Width = 41.000000000000000000
+        StartAngle = -150.000000000000000000
+        EndAngle = 150.000000000000000000
+      end
+      object Rectangle26: TRectangle
+        Height = 9.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Width = 50.000000000000000000
+      end
+      object Layout16: TLayout
+        Height = 41.000000000000000000
+        Position.X = 32.000000000000000000
+        RotationAngle = 45.000000000000000000
+        Width = 42.000000000000000000
+        object Rectangle27: TRectangle
+          Height = 41.000000000000000000
+          Position.X = 16.000000000000000000
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          Width = 9.000000000000000000
+        end
+        object Rectangle28: TRectangle
+          Height = 9.000000000000000000
+          Position.Y = 16.000000000000000000
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          Width = 41.000000000000000000
+        end
+        object FloatAnimation15: TFloatAnimation
+          Enabled = True
+          Duration = 1.000000000000000000
+          Loop = True
+          PropertyName = 'RotationAngle'
+          StartValue = 0.000000000000000000
+          StopValue = 360.000000000000000000
+        end
+      end
+      object Rectangle29: TRectangle
+        Height = 8.000000000000000000
+        Position.X = 6.000000000000000000
+        Position.Y = 9.000000000000000000
+        XRadius = 2.000000000000000000
+        YRadius = 2.000000000000000000
+        Width = 20.000000000000000000
+        object FloatAnimation16: TFloatAnimation
+          AutoReverse = True
+          Enabled = True
+          Duration = 0.200000002980232200
+          Inverse = True
+          Loop = True
+          PropertyName = 'Scale.X'
+          StartValue = 0.000000000000000000
+          StopValue = 1.000000000000000000
+        end
+        object FloatAnimation17: TFloatAnimation
+          AutoReverse = True
+          Enabled = True
+          Duration = 0.200000002980232200
+          Loop = True
+          PropertyName = 'Position.X'
+          StartValue = 6.000000000000000000
+          StopValue = 16.000000000000000000
+        end
+      end
+      object ShadowEffect12: TShadowEffect
+        Distance = 7.000000000000000000
+        Direction = 40.000000000000000000
+        Softness = 0.250000000000000000
+        Opacity = 0.400000005960464500
+        ShadowColor = claBlack
+      end
+    end
+    object DPFADBanner1: TDPFADBanner
+      Alpha = 1.000000000000000000
+      ShadowOffsetHeight = 10.000000000000000000
+      ShadowOpacity = 1.000000000000000000
+      ShadowRadius = 10.000000000000000000
+      Align = alBottom
+      Position.Y = 270.000000000000000000
+      Width = 480.000000000000000000
+      Height = 50.000000000000000000
+      OnDidLoad = DPFADBanner1DidLoad
+      OnError = DPFADBanner1Error
+    end
+    object GamePausedText: TText
+      Align = alScale
+      Color = claBlue
+      Height = 60.000000000000000000
+      HitTest = False
+      Position.X = 137.000000000000000000
+      Position.Y = 101.000000000000000000
+      Stretch = True
+      Text = 'GAME PAUSED'
+      Visible = False
+      Width = 192.000000000000000000
+    end
+  end
+end
